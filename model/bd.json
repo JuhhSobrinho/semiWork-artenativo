@@ -1,0 +1,18 @@
+[
+    {
+        "id": "0",
+        "name": "R.E.P.O",
+        "description": "An online co-op horror game with up to 6 players. Locate valuable, fully physics-based objects and handle them with care as you retrieve and extract to satisfy your creator's desires!",
+        "linkYoutube": "https://www.youtube.com/embed/C3IVB0Wnk1s?si=EC51iZVY1wQK6SIi",
+        "linkSteam": "https://store.steampowered.com/app/3241660/REPO/",
+        "linkKit": "https://drive.google.com/drive/folders/1Q12NJj2NYKLtUOixD0MD9JjszCHSUrrp"
+    },
+    {
+        "id": "1",
+        "name": "VOIDIGO",
+        "description": "A vividly animated action roguelite focused on boss hunting. Unleash an array of diverse weapons and powerups to combat the corruption of the Void.",
+        "linkYoutube": "https://www.youtube.com/embed/SZ5InyYBO2g?si=8H2sD-2NuL8UV1Ux",
+        "linkSteam": "https://store.steampowered.com/agecheck/app/1304680/",
+        "linkKit": "https://drive.google.com/file/d/1zQEn6ySJ_I6Iq4T3gtqPJ_ipfV-TqGRt/view"
+    }
+]

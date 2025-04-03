@@ -1,0 +1,136 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semiwork</title>
+        <link rel="stylesheet" href="/view/styles/style.css">
+        <link rel="shortcut icon" href="/view/src/sw_gradient_white.png"
+            type="image/x-icon">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <a class="navbar-brand" href="#"></a>
+                <ul class="nav-navbar-nav">
+                    <li>
+                        <a href="#">Semiwork</a>
+                    </li>
+                    <li>
+                        <a id="openModal" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h2>Fale Conosco</h2>
+                <form id="contactForm" method="POST">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                
+                    <div class="btn-busines-support">
+                        <button type="submit" class="btn" id="businessBtn" data-endpoint="https://formspree.io/f/xldjpbwv"
+                        onmouseover="this.innerText='ENVIAR'" 
+                        onmouseout="this.innerText='BUSINESS'">
+                            BUSINESS
+                        </button>
+                        <button type="submit" class="btn" id="supportBtn" data-endpoint="https://formspree.io/f/xldjpbwv"        onmouseover="this.innerText='ENVIAR'" 
+                        onmouseout="this.innerText='SUPPORT'">
+                        SUPPORT
+                        </button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="logo-paralax">
+                <ul class="nav-bar-midias">
+                    <li>
+                        <a href="https://x.com/semiworkstudios"><i
+                                class="fa-brands fa-x-twitter"
+                                style="color: #ff0051;"></i></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://store.steampowered.com/search/?term=semiwork"><i
+                                class="fa-brands fa-steam"
+                                style="color: #ff0051; height: 40px;"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitch.tv/semiwork"><i
+                                class="fa-brands fa-twitch"
+                                style="color: #ff0051;"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@semiwork"><i
+                                class="fa-brands fa-youtube"
+                                style="color: #ff0051;"></i></a>
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+
+        <div class="devs">
+            <p>Estúdio de jogos indie com sede em Uppsala, Suécia <br>
+                Atualmente trabalhando em REPO</p>
+        </div>
+
+        <section class="new">
+            <h2>New</h2>
+            <main class="novidades">
+                <div id="destaque-html" class="destaque">
+
+                </div>
+                <section id="card-new-html" class="card-new">
+                    <div class="card">
+
+                    </section>
+                </main>
+            </section>
+            <div class="line"></div>
+            <section class="section-games">
+                <h2>GAMES</h2>
+
+                <!-- Carrossel -->
+                <div class="swiper mySwiper">
+                    <div id="swiper-games" class="swiper-wrapper">
+                        <!-- Slide 1 -->
+
+                        <!-- Slide 2 -->
+
+                    </div>
+
+                    <!-- Botões de navegação -->
+                    <div id="btn-esquerdo" class="swiper-button-next"></div>
+                    <div id="btn-direito" class="swiper-button-prev"></div>
+
+                    <!-- Paginação -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <div class="line"></div>
+            <p>
+                © 2025 Semiwork Studios
+            </p>
+            <script
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        </body>
+        <script type="module" src="/controller/main.js"></script>
+    </html>
