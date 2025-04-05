@@ -14,8 +14,7 @@ carregarBancoDeDados().then(bd => {
                 <p class="description-game">${element.description}</p>
                 <div class="game-card">
                     <iframe
-                        width="560"
-                        height="315"
+                        class="video-destaque"
                         src="${element.linkYoutube}"
                         title="${element.name} Trailer"
                         frameborder="0"

@@ -26,8 +26,7 @@ fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.yo
             if (aux === 1) {
                 destaqueNewHtml += `
                     <iframe
-                        width="560"
-                        height="315"
+                        class="video-destaque"
                         style="border-radius: 10px; overflow: hidden;"
                         src="${embedUrl}"
                         title="${title}"
@@ -43,8 +42,7 @@ fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.yo
                             <span class="text-card">@semiwork</span>
                         </div>
                         <iframe
-                            width="150"
-                            height="80"
+                            class="video-card"
                             style="border-radius: 5px; overflow: hidden;"
                             src="${embedUrl}"
                             title="${title}"
@@ -64,38 +62,35 @@ fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.yo
             cardItem.addEventListener('click', () => {
                 const idCardItem = cardItem.id;
                 console.log('Card clicado:', idCardItem);
-
+        
                 const cardElement = document.getElementById(idCardItem);
-
+        
+                // Fecha todos os outros cards antes de abrir o clicado
                 document.querySelectorAll('.card').forEach((card) => {
                     if (card.id !== idCardItem) {
-                        card.style.backgroundColor = 'var(--cor-secundaria)';
-                        card.style.height = '60px';
-                        card.style.flexDirection = "row";
-                        card.querySelectorAll('iframe').forEach(iframe => {
-                            iframe.style.width = '100%'; 
-                            iframe.style.height = '100%'; 
-                            iframe.style.borderRadius = '10px'; 
-                        })
-
-
-                    } else {
-                        card.style.backgroundColor = '';
+                        card.classList.remove('card-clicado'); // Remove "ativo" dos outros
+                        card.classList.add('card-desligado'); // Garante que fiquem desligados
                     }
                 });
-
-
-                cardElement.style.transition = "height 0.5s ease-in-out";
-                cardElement.style.height = "400px";
-                cardElement.style.flexDirection = "column-reverse";
-                const card = document.querySelector('.card');
-                card.querySelectorAll('iframe').forEach(iframe => {
+        
+                // Alterna o estado do card clicado
+                if (cardElement.classList.contains('card-clicado')) {
+                    cardElement.classList.remove('card-clicado');
+                    cardElement.classList.add('card-desligado'); // Se já estava aberto, fecha
+                } else {
+                    cardElement.classList.add('card-clicado');
+                    cardElement.classList.remove('card-desligado'); // Se estava fechado, abre
+                }
+        
+                // Atualiza os iframes apenas do card clicado
+                cardElement.querySelectorAll('iframe').forEach(iframe => { 
                     iframe.style.width = '100%'; 
                     iframe.style.height = '100%'; 
                     iframe.style.borderRadius = '10px'; 
                 });
             });
         });
+        
 
 
 
