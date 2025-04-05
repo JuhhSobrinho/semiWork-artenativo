@@ -23,8 +23,8 @@ carregarBancoDeDados().then(bd => {
                     </iframe>
                     <div class="card-link">
                         <h2 class="titulo-game">${element.name}</h2>
-                        <a class="btn" href="${element.linkSteam}" target="_blank"> ${element.name} Jogo Steam Page</a>
-                        <a class="btn" href="${element.linkKit}" target="_blank"> ${element.name} Jogo Press Kit</a>
+                        <a class="btn" href="${element.linkSteam}" target="_blank"> ${element.name} Game Steam Page</a>
+                        <a class="btn" href="${element.linkKit}" target="_blank"> ${element.name} Game Press Kit</a>
                     </div>
                 </div>
             </div>
