@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Semiwork</title>
-        <link rel="shortcut icon" href="/view/src/icon.webp"
-            type="image/x-icon">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semiwork</title>
+  <link rel="shortcut icon" href="/view/src/icon.webp" type="image/x-icon">
 
-        <style>
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html { width: 100%; height: 100%; overflow: hidden; background: black; }
     
@@ -96,19 +95,25 @@
       display: none;
     }
   </style>
-    </head>
-    <body>
-        <!-- Container Splash -->
-        <div id="splash">
-            <div class="gradient-background"></div>
-            <div class="face">
-                <div class="eye left"><div class="pupil"></div></div>
-                <div class="eye right"><div class="pupil"></div></div>
-                <div class="mouth"></div>
-            </div>
-        </div>
+</head>
+<body>
 
-        <script>
+    <div id="main-content">
+        <iframe id="preload-frame" src="./view/index.html" frameborder="0" style="width:100vw; height:100vh;"></iframe>
+      </div>
+  <!-- Container Splash -->
+  <div id="splash">
+    <div class="gradient-background"></div>
+    <div class="face">
+      <div class="eye left"><div class="pupil"></div></div>
+      <div class="eye right"><div class="pupil"></div></div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+
+
+  
+  <script>
     // Movimento dos olhos
     document.addEventListener("mousemove", (event) => {
       const eyes = document.querySelectorAll(".eye");
@@ -123,15 +128,16 @@
       });
     });
     
-// Redireciona para o index real após a animação
-setTimeout(() => {
-  document.getElementById("splash").classList.add("fade-out");
-
-  setTimeout(() => {
-    window.location.href = "./view/index.html"; // muda de página de verdade
-  }, 1000);
-}, 1100);
-  // Ajuste esse tempo conforme sua necessidade para a exibição da splash
+    // Tempo para finalizar a splash
+    setTimeout(() => {
+      document.getElementById("splash").classList.add("fade-out");
+      // Espera a animação terminar (1s)
+      setTimeout(() => {
+        // Oculta a splash e mostra o conteúdo principal
+        document.getElementById("splash").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      }, 1000);
+    }, 1000);  // Ajuste esse tempo conforme sua necessidade para a exibição da splash
   </script>
-    </body>
+</body>
 </html>

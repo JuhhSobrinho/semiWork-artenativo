@@ -12,7 +12,7 @@
     --img-logo-sw_gradient: url("../src/sw_gradient_white.webp");
     --img-fundo-rosto-apagado: url("../src/rprostoapagado.webp");
     --img-fundo-repo-viajante: url("../src/repo-viajant.webp");
-    --img-fundo-mobile-repo-viajante: url('/view/src/repo-viajant-mobile.webp');
+    --img-fundo-mobile-repo-viajante: url('../src/repo-viajant-mobile.webp');
 }
 
 body::-webkit-scrollbar {
